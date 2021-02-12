@@ -731,7 +731,7 @@
 //   return a + b;
 // }
 
-const sum = (a, b) => a + b;
+// const sum = (a, b) => a + b;
 // const sum = (a, b) => { return a + b };
 
 // console.log(sum(2, 3));
@@ -759,30 +759,303 @@ const sum = (a, b) => a + b;
 //   } 
 // );
 
-function checkRole(role) {
-  return function() {
-    if (role === 'Account') {
+// function checkRole(role) {
+//   return function() {
+//     if (role === 'Account') {
 
-    } else if (role === 'Store') {
+//     } else if (role === 'Store') {
   
-    }
-  };
-}
+//     }
+//   };
+// }
 
-const checkRole = role => { // role === 'Account' ? ['getAllSael', 'getAllAccount'] : ['getAllStock', 'getStockLost']
-  return () => {
-    if (role === 'Account') {
-      return ['getAllSael', 'getAllAccount']
-    } else if (role === 'Store') {
-      return ['getAllStock', 'getStockLost']
-    } else if (role === 'HR') {
-      return ['salary']
-    }
-  }
-};
+// const checkRole = role => { // role === 'Account' ? ['getAllSael', 'getAllAccount'] : ['getAllStock', 'getStockLost']
+//   return () => {
+//     if (role === 'Account') {
+//       return ['getAllSael', 'getAllAccount']
+//     } else if (role === 'Store') {
+//       return ['getAllStock', 'getStockLost']
+//     } else if (role === 'HR') {
+//       return ['salary']
+//     }
+//   }
+// };
 
-() => { /* body */ }
+// () => { /* body */ }
 
-const permission = check(role);
+// const permission = check(role);
 
 // user.email
+
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// const ask = (question, yes, no) => {
+//   if (confirm(question)) yes();
+//   else no();
+// }
+
+// ask(
+//   "Do you agree?",
+//   function() { alert("You agreed."); },
+//   function() { alert("You canceled the execution."); }
+// );
+
+// ask('Do you agree?', () => alert('You agreed.'), () => alert('You canceled the execution.'));
+
+// const sum=(a,b)=>a+b;
+// const sum = (a, b) => a + b;
+
+// for (let i = 0; i <= 5; i++) {
+//   console.log();
+
+//   function ask() {
+//     console.log('kiskssk');
+//   }
+
+//   function ask() {
+//     console.log('kiskssk');
+//   }
+
+//   function ask() {
+//     console.log('kiskssk');
+//   }
+
+//   function ask() {
+//     console.log('kiskssk');
+//   }
+// }
+
+// Object declare
+// #2
+// const person = new Object();
+
+// #1
+// const person = {
+//   'nickName': 'Jit',
+//   "age": 14,
+//   isAdult: true,
+//   address: {
+//     road: 'Banthatthong',
+//     khet: 'Pathumwan',
+//     changwat: 'Bangkok',
+//     postalCode: '10330'
+//   },
+//   for: 'U',
+//   function: 'func',
+//   'has car': true,
+//   hasCar: true,
+// };
+
+// console.log(person.color)
+
+// const nickName = person.nickName;
+// const age = person.age;
+// const changwat = person.address.changwat
+
+// const fort = person['for'];
+// const hasCar = person['has car'];
+// let road = person['address']['road'];
+// road = person['address'].road;
+// road = person.address['road'];
+
+// const inputKey = prompt('enter key to find value'); // 'function', 'age'
+// // let kValue = person.k; // Wrong
+// kValue = person[inputKey]; // person['function'], person['age']
+// // person['age']
+// console.log(kValue)
+
+// const type = 'Member';
+// console.log(type)
+// type = 'VIP'
+
+// person.color = 'brown';
+// console.log(person.color)
+// person.color = 'red';
+// console.log(person.color);
+// delete person.color;
+// console.log(person.color);
+
+// person['color'] = 'green';
+// delete person['color'];
+
+// const keyToAdd = 'sex';
+
+// const human = {
+//   name: 'Tle',
+//   age: 20, 
+//   address: '190/0 Bangkok', 
+//   isSingle: false, 
+//   iq: 9.9,
+//   [keyToAdd]: 'male'
+// };
+// const resultObj = {};
+
+// // resultObj.key = 1;
+// // resultObj = {
+// //   key: 1
+// // }
+
+// while(1) {
+//   const key = prompt('Enter key');
+//   if (key === 'stop') break;
+//   const value = prompt('Enter value');
+//   if (value === 'stop') break;
+//   resultObj[key] = value;
+// }
+
+// console.log(resultObj);
+
+// const fruitObj = {};
+
+// while(1) {
+//   const name = prompt('Enter fruit');
+//   if (name === 'stop') break;
+//   const amount = prompt('Enter fruit quantity');
+//   if (amount === 'stop') break;
+//   fruitObj[amount > 1 ? `${name}s` : name] = amount;
+// }
+
+// console.log(fruitObj);
+
+// const firstName = prompt('Enter firstname');
+// const lastName = prompt('Enter lastname');
+// const age = +prompt('Enter age');
+
+// const user = {
+//   firstName: firstName,
+//   lastName: lastName,
+//   age: age
+// };
+
+// const user = {
+//   firstName, // firstName: firstName
+//   lastName,
+//   age
+// };
+
+// console.log(user);
+
+// const index = {
+//   0: 'Zero',
+//   1: 'One'
+// }
+
+// console.log(index[0])
+
+// const user = {
+//   firstName: 'Wissanu',
+//   age: 27
+// };
+
+// const isFirstNameExist = 'firstName' in user;
+// const isLastNameExist = 'lastName' in user;
+// console.log(isFirstNameExist);
+// console.log(isLastNameExist);
+
+const person = {
+  'nickName': 'Jit',
+  "age": 14,
+  isAdult: true,
+  address: {
+    road: 'Banthatthong',
+    khet: 'Pathumwan',
+    changwat: 'Bangkok',
+    postalCode: '10330'
+  },
+  for: 'U',
+  function: 'func',
+  'has car': true,
+  hasCar: true,
+};
+
+// console.log('nickName : ' + person.nickName)
+// console.log('age : ' + person.age)
+
+// for (let key in person) {
+//   console.log(key + ' : ' + JSON.stringify(person[key]))
+// }
+
+// const user = person;
+// user.age = 44;
+// console.log(person.age)
+
+// console.log(user === person)
+
+// const user1 = {
+//   name: 'a'
+// };
+
+// const user2 = {
+//   name: 'a'
+// };
+
+// const user3 = user1;
+
+// console.log(user1 == user2)
+
+// const user = {
+//   email: 'test@gmail.com',
+//   password: '11111',
+// };
+
+// const user2 = {};
+
+// for (let key in user) {
+//   user2[key] = user[key];
+// }
+
+// const user3 = {...user};
+
+// const defaultPermission = {canDelete: false, canCreate: false};
+// const permission1 = {canView: true};
+// const permission2 = {canEdit: false, canDelete: true};
+
+// const user = new Object();
+// Object.assign(permission1, permission2, defaultPermission)
+/* result from merge between permission2 and defaultPermission
+  {
+    canEdit: false,
+    canDelete: false,
+    canCreate: false
+  }
+*/
+/* result from merge between permission1 and result from first merge
+  {
+    canView: true
+    canEdit: false,
+    canDelete: false,
+    canCreate: false
+  }
+*/
+// console.log(permission1)
+// console.log(permission2)
+
+// const newMerge = Object.assign({}, permission1, permission2, defaultPermission)
+// const clone = Object.assign({}, defaultPermission);
+
+const user = {
+  firstName: 'Wissanu',
+  lastName: 'KonjunD',
+  age: 27
+}
+
+const isEmptyObject = obj => {
+  // let result = true;
+  for (let key in obj) {
+    console.log('key: ' + key)
+    console.log('value: ' + obj[key])
+
+    // result = false;
+    // break;
+  }
+  // return result;
+};
+
+isEmptyObject(user)
+
+// #1 Iteration key = firstName
+// #2 Iteration key = lastName
+// #3 Iteration key = age
