@@ -527,8 +527,8 @@
 // alertName('Tle')
 // alertName();
 
-function draw(n) {
-  let star = '';
+// function draw(n) {
+  // let star = '';
   // for (let i = 1; i <= n; i++) {
   //   star = star + '*';
   // }
@@ -537,12 +537,12 @@ function draw(n) {
   // #3 i=3; 3<=4; star='**'+'*' => '***'; i++ => 4
   // #4 i=4; 4<=4; star='***'+'*' => '****'; i++ => 5  
   
-  for(let i=1;i<=n;i++) {
-    for(let j=1;j<=n;j++) {
-      star = star + j;
-    }
-    star = star + '\n';
-  }
+  // for(let i=1;i<=n;i++) {
+  //   for(let j=1;j<=n;j++) {
+  //     star = star + j;
+  //   }
+  //   star = star + '\n';
+  // }
 
   // #1 j=1;i=1; star = '' + '*' => '*'
   // #2 j=2;i=1; star = '*' + '*' => '**'
@@ -557,7 +557,232 @@ function draw(n) {
   // #9 j=3;i=3; star = '***\n***\n**' + '*' => '***\n***\n***'
   // End Inner Loop star = '***\n***\n***' + '\n' => '***\n***\n***\n'
 
-  console.log(star) 
+  // console.log(star) 
+// }
+
+// function draw18(n) {
+//   let star = '';
+//   for (let i = 0; i < n; i++) {
+//     for (let j = 0; j < n; j++) {
+//       star += i > j ? '-' : '*' 
+//     }
+//     star = star + '\n';
+//   }
+//   console.log(star)
+// }
+
+// draw18(4)
+
+// showMessage('Jit');
+// showMessage();
+// showMessage('Tle', 'Welcome to our website');
+
+// let defaultWelcomeText = 'Hello World';
+
+// function showMessage(name = 'Anonymous', text) {
+//   // function body
+//   let defaultWelcomeText = 'Hello everybody';
+//   console.log('Hello ' + name);
+//   console.log(text ? text : defaultWelcomeText);
+
+//   // if (text) {
+//   //   console.log(text);
+//   // } else {
+//   //   console.log(defaultWelcomText);
+//   // }
+// }
+
+// showMessage('Jit');
+// showMessage();
+// showMessage('Tle', 'Welcome to our website');
+// showMessage;
+
+// const showMessage = function(name = 'Anonymous', text) {
+//   console.log('Hello ' + name);
+//   console.log(text);
+//   return 'Success Log';
+// };
+
+// showMessage();
+// showMessage('Jit');
+// showMessage('Tle', 'Welcome to our website');
+
+// console.log(showMessage);
+
+// const showWelcomeText = showMessage;
+
+// showWelcomeText('Tle', 'Welcome to our website');
+
+// const myAlert = alert;
+// console.log(myAlert)
+// myAlert('Hello Student');
+
+// function showOk() {
+//   alert( "You agreed." );
+// }
+
+// function showCancel() {
+//   alert( "You canceled the execution." );
+// }
+
+// function ok(isOk, alertOk, alertCancel) {
+//   // console.log(alertOk)
+//   // console.log(alertCancel)
+//   if (isOk) {
+//     alertOk();
+//   } else {
+//     alertCancel();
+//   }
+// }
+
+// ok(true, showOk, showCancel);
+
+// function showOk1(message) {
+//   alert( message );
+// }
+
+// function showCancel1(message) {
+//   alert( message );
+// }
+
+// function ask(question, alertOk, alertCancel) {
+//   const isOk = confirm(question);
+//   // if (isOk) {
+//   //   alertOk('Yes')
+//   // } else {
+//   //   alertCancel('No')
+//   // }
+
+//   if (isOk) {
+//     alertOk('Yes')
+//   } else {
+//     alertOk('No')
+//   }
+// }
+
+// // ask('Are u crazy', showOk1, showCancel1);
+// ask('Are u crazy', showOk1);
+
+// function returnFunc() {
+//   const result = function() {
+//     console.log('This is return function')
+//   };  
+//   return result;
+// };
+
+/*
+  resultFromreturnFunc
+
+  function() {
+    console.log('This is return function')
+  };
+*/
+// const resultFromReturnFunc = returnFunc();
+// console.log(resultFromReturnFunc)
+// resultFromReturnFunc()
+
+// returnFunc()()
+
+// (function() {
+//   console.log('This is return function')
+// })()
+ 
+// fs.readFile('text.txt', function() {
+//   console.log('success')
+// })
+
+// console.log('Do');
+// console.log('After');
+
+// function showMeessage() {
+
+// }
+
+// const showMessage = function() {
+  
+// };
+
+// const showMessage = (name, text) => {
+//   console.log('Hello' + name);
+//   console.log(text);
+//   return 'Show success';
+// };
+
+// const result = showMessage('Tle', 'Hello Code Camp');
+// console.log(result);
+
+// const showMessage = name => {
+//   console.log('Hello' + name);  
+//   return 'Show success';
+// };
+
+// const showMessage = name => {
+//   return 'Show success ' + name;
+// };
+
+// const showMessage = (name, text) => 'Show success ' + name; // return 'Show success ' + name
+// const showMessage = name => { return 'Show success ' + name };
+
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// const sum = function(a, b) {
+//   return a + b;
+// }
+
+const sum = (a, b) => a + b;
+// const sum = (a, b) => { return a + b };
+
+// console.log(sum(2, 3));
+
+// // user data email. firstName, lastName, birthDate, point, address, saleHistory
+// const userEmail = 'tle@gmail.com';
+// const userFirstName = 'Wissanu';
+
+// const user = {
+//   email: 'tle@gmail.com',
+//   firstName: 'Wissanu'
+// }
+
+// const getUser = () => {
+//   return {
+//     email: 'tle@gmail.com',
+//     firstName: 'Wissanu'
+//   } 
+// };
+
+// const getUser = () => (
+//   {
+//     email: 'tle@gmail.com',
+//     firstName: 'Wissanu'
+//   } 
+// );
+
+function checkRole(role) {
+  return function() {
+    if (role === 'Account') {
+
+    } else if (role === 'Store') {
+  
+    }
+  };
 }
 
-draw(4) 
+const checkRole = role => { // role === 'Account' ? ['getAllSael', 'getAllAccount'] : ['getAllStock', 'getStockLost']
+  return () => {
+    if (role === 'Account') {
+      return ['getAllSael', 'getAllAccount']
+    } else if (role === 'Store') {
+      return ['getAllStock', 'getStockLost']
+    } else if (role === 'HR') {
+      return ['salary']
+    }
+  }
+};
+
+() => { /* body */ }
+
+const permission = check(role);
+
+// user.email
