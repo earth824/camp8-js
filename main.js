@@ -955,21 +955,21 @@
 // console.log(isFirstNameExist);
 // console.log(isLastNameExist);
 
-const person = {
-  'nickName': 'Jit',
-  "age": 14,
-  isAdult: true,
-  address: {
-    road: 'Banthatthong',
-    khet: 'Pathumwan',
-    changwat: 'Bangkok',
-    postalCode: '10330'
-  },
-  for: 'U',
-  function: 'func',
-  'has car': true,
-  hasCar: true,
-};
+// const person = {
+//   'nickName': 'Jit',
+//   "age": 14,
+//   isAdult: true,
+//   address: {
+//     road: 'Banthatthong',
+//     khet: 'Pathumwan',
+//     changwat: 'Bangkok',
+//     postalCode: '10330'
+//   },
+//   for: 'U',
+//   function: 'func',
+//   'has car': true,
+//   hasCar: true,
+// };
 
 // console.log('nickName : ' + person.nickName)
 // console.log('age : ' + person.age)
@@ -1036,26 +1036,428 @@ const person = {
 // const newMerge = Object.assign({}, permission1, permission2, defaultPermission)
 // const clone = Object.assign({}, defaultPermission);
 
-const user = {
-  firstName: 'Wissanu',
-  lastName: 'KonjunD',
-  age: 27
-}
+// const user = {
+//   firstName: 'Wissanu',
+//   lastName: 'KonjunD',
+//   age: 27
+// }
 
-const isEmptyObject = obj => {
-  // let result = true;
-  for (let key in obj) {
-    console.log('key: ' + key)
-    console.log('value: ' + obj[key])
+// const isEmptyObject = obj => {
+//   // let result = true;
+//   for (let key in obj) {
+//     console.log('key: ' + key)
+//     console.log('value: ' + obj[key])
 
-    // result = false;
-    // break;
-  }
-  // return result;
-};
+//     // result = false;
+//     // break;
+//   }
+//   // return result;
+// };
 
-isEmptyObject(user)
+// isEmptyObject(user)
 
 // #1 Iteration key = firstName
 // #2 Iteration key = lastName
 // #3 Iteration key = age
+
+// const product = {
+//   id: 1,
+//   name: 'Coke',
+//   price: 15,
+//   description: 'Coke is the best',
+//   size: 500,
+//   unit: 'bottle',
+//   'best before': new Date('2022-10-01'),
+//   distributor: {
+//     name: 'Coca Cola Thailand',
+//     address: 'Bangkok 10130'
+//   }
+// }
+
+// #1
+// product.name // 'Coke'
+// product.distributor.name // 'Coca Cola Thailand'
+
+// // #2
+// product['id'] // 1
+// product['distributor']['name'] // 'Coca Cola Thailand
+// product['best before']
+
+// product.distributor['name'] // 'Coca Cola Thailand'
+
+// product.distributor // {name: 'Coca Cola Thailand', address: 'Bangkok 10130'}
+
+// product.price = 20;
+// product['size'] = 330;
+
+// product.distributor = 'Coca Thailand';
+
+// const input = 'price'
+// product[input] // product['price'] => 20 
+
+// product = {
+//   id: 1,
+//   name: 'Coke',
+//   price: 15,
+//   description: 'Coke is the best',
+//   size: 500,
+//   unit: 'bottle',
+//   bestBefore: new Date('2022-10-01'),
+//   distributor: 'Coca Thailand'
+// }
+
+// const distributor = { name: 'Coca Cola Thailand', address: 'Bangkok 10130' };
+
+// const isIdExist = 'id' in product // true
+// const isDiscoutnExist = 'discount' in product // false 
+
+// if ('discount' in product) {
+//   const netPrice = product.price * (1-product.discount);
+// }
+
+// for (let k in product) { // Object.keys, Object.value, Object.entries
+//   console.log(k)
+// }
+
+// const name = 'Tle'
+
+// console.log(product.distributor);
+// delete product.distributor;
+// console.log(product.distributor);
+
+// product.distributor = {name: 'Coca Cola New', address: 'Bangkok 10130',};
+// product.distributor.address = 'Nonthaburi 30000';
+
+// console.log(product.distributor)
+
+// const product = new Object();
+
+// const user = {
+//   username: 'TestUSer',
+//   password: '123456789'
+// }
+
+// const pi = 3.14
+// pi = 22/7;
+
+// const admin = user;
+// admin.username = 'Admin';
+
+// user.password = 'ttllee';
+
+// console.log(user.username) //
+// console.log(admin.password) //
+
+// const admin1 = { ...user };
+// // console.log(admin1)
+// admin1.username = 'Superadmin'
+// console.log(admin1)
+// console.log(user)
+
+// Object.assign(user, admin1)
+// console.log(user)
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130
+// };
+
+// let totalSalaries = 0;
+
+// for (let key in salaries) {
+//   totalSalaries += salaries[key];
+// }
+
+// console.log(totalSalaries);
+
+// let menu = {
+//   width: '200',
+//   height: 300,
+//   title: "My menu"
+// };
+
+
+// function multiplyNumeric(obj, times) {
+  // const result = {};
+
+  // for (let key in obj) {
+  //   if (+obj[key]) {
+  //     result[key] = obj[key] * times;
+  //   } else {
+  //     result[key] = obj[key];
+  //   }
+  // }
+  // return result;
+
+//   const result = { ...obj };
+
+//   for (let key in obj) {
+//     if (+obj[key]) result[key] = obj[key] * times;
+//   }
+//   return result;
+// }
+
+// console.log(multiplyNumeric(menu, 10))
+// var firstName = 'Aaaaa'; // window.firstName = 'Aaaaaa';
+
+// const person = {
+//   firstName: 'Wissanu',
+//   lastName: 'KongjunD',
+//   // getFullName: function() {
+//   //   // return 'Wissanu KongjunD'
+//   //   return this.firstName + ' ' + this.lastName
+//   // }
+//   // getFullName() {
+//   //   return 'Wissanu KongjunD'
+//   // }
+// }
+
+// person.walk = function() {
+//   alert('kak kak');
+// }
+
+// person.walk = function() {
+//   alert('kub kub');
+// }
+
+// console.log(person.walk());
+// console.log(person.getFullName());
+// person.firstName = 'Thongchai';
+// console.log(person.getFullName());
+
+// const getFullName = person.getFullName;
+// console.log(getFullName())
+
+// window.getFullName();
+
+// const user = {
+//   firstName: 'A',
+//   lastName: 'B'
+// }
+
+// user.getFullName = person.getFullName;
+// console.log(user.getFullName());
+
+// function getFullName() {
+//   return this.firstName + ' ' + this.lastName;
+// }
+
+// const person = {
+//   firstName: 'Wissanu',
+//   lastName: 'KongjunD',
+//   getFullName: function() {    
+//     return this.firstName + ' ' + this.lastName
+//   }
+//   // getFullName: () => this.firstName + ' ' + this.lastName
+// }
+
+// console.log(person.getFullName());
+
+// console.log(getFullName());
+// person.getFullName = getFullName;
+// console.log(person.getFullName());
+// user.getFullName = getFullName;
+// console.log(user.getFullName());
+
+// var firstName = 'Tle'; // window.firstName = 'Tle'
+// console.log(getFullName()); // window.getFullName();
+
+// function makeUser() {
+//   return {
+//     name: "John",
+//     ref: this
+//   };
+// };
+
+// let user = makeUser();
+
+// console.log(user.ref);
+
+// let calculator = {
+//   read: function() {
+//     this.a = +prompt('a');
+//     this.b = +prompt('b');
+//   },
+//   sum: function() {
+//     return this.a + this.b;
+//   },
+//   multiply: function() {
+//     return this.a * this.b;
+//   }
+// };
+
+// const ladder = {
+//   step: 0,
+//   up() {
+//     this.step++;
+//     return this;
+//   },
+//   down() {
+//     this.step--;
+//     return this;
+//   },
+//   showStep: function() {
+//     alert(this.step);
+//     return this;
+//   }
+// };
+
+// ladder.up(); // undefined
+// // console.log(ladder.step)
+// ladder.up().up(); // undefined.up()
+
+// ladder.up().up().down().showStep().up().up().showStep();
+
+// const user = {};
+// const user = new Object();
+
+// function User(username, password) {
+//   this.username = username;
+//   this.password = password;
+//   this.getHelloMessage = function() {
+//     alert('Welcome ' + this.username)
+//   }
+// }
+
+// const user3 = new User('Superadmin', '12345'); 
+// // {username: 'Superadmin', password: '12345'}
+// // const user = {
+// //   username: 'Superadmin',
+// //   password: '12345'
+// // }
+
+// const user1 = new User('Tle', 'abcd');
+// const user2 = new User('UserTwo', 'oohhpp');
+// console.log(user1.getHelloMessage())
+
+// function Calculator() {
+//   this.read = function() {
+//     this.a = +prompt('a');
+//     this.b = +prompt('b');    
+//   }
+
+//   this.sum = function() {
+//     return this.a + this.b;
+//   }
+
+//   this.mul = function() {
+//     return this.a * this.b;
+//   }
+// }
+
+// const calc = new Calculator();
+// calc.read();
+// console.log(calc.sum());
+// console.log(calc.mul());
+
+// function Accumulator(initialValue) {
+//   this.value = initialValue;
+//   this.read = function() {
+//     const input = +prompt('Enter value');
+//     this.value = this.value + input;
+//     return this;
+//   }
+// }
+
+// const acc = new Accumulator(5);
+// console.log(acc.value);
+// // acc.read().read();
+// acc.read()
+// acc.read();
+// acc.read();
+// console.log(acc.value)
+
+// let num = 255;
+// console.log(num.toString(16))
+
+//# 1 Math floor
+// let num = -7.71;
+// console.log(Math.floor(num));
+
+//# 2 Math ceil
+// console.log(Math.ceil(num));
+
+//# 3 Math round
+// console.log(Math.round(num));
+
+//# 4 Math trunc
+// console.log(Math.trunc(num))
+// const num = 12.363 ;
+// console.log(num.toFixed(2));
+
+// console.log(parseInt('15.01px'));
+// console.log(parseFloat('15.01.3.4.5'));
+
+// console.log(Math.random());
+// console.log(Math.max(45,67,34,90,11,34,56,99));
+// console.log(Math.min(45,67,34,90,11,34,56,99));
+// console.log(Math.pow(2, 5)); // 2 ** 5
+
+// function random(min, max) {
+//   return min + Math.random() * (max - min);
+// }
+
+// // console.log(random(1, 5));
+
+// function randomInt(min, max) {
+//   return min + Math.floor(Math.random() * (max + 1 - min));
+// }
+
+// console.log(randomInt(1, 6));
+
+// const str = 'I\'m a programmer'; 
+// const str = "I'm a programmer";
+// const str = "you say \"Hello world\""
+// \var\www\
+// const str = '\\var\\www\\';
+// // \n 
+// console.log(str)
+
+// let str = "Happy XXX Year XYZWA" // 'HAPPY XXX YEAR'
+// console.log(str.length)
+// console.log(str[20])
+// console.log(str.charAt(6))
+
+// str.charAt[6] = 'O';
+
+// for (let s of str) {
+//   console.log(`${s}\n`)
+// }
+// console.log((1.23).toFixed(1));
+// console.log(str.toUpperCase())
+// console.log(str.toLowerCase())
+// console.log("Happy New Year".toLowerCase())
+
+// console.log(str.toLowerCase().indexOf('xxx'));
+// console.log(str.lastIndexOf('Xx'));
+
+// slice, substr, substring
+// const sliced = str.slice(0, 5)
+// const slicedBack = str.slice(-4, -2)
+
+// const substringed = str.substring(4, 0)
+
+// const substred = str.substr(2, 5);
+
+// console.log(str)
+// console.log(substred)
+
+// let testText = 'Widget with id';
+// console.log(testText.includes('By'))
+// console.log(testText.startsWith('W'));
+// console.log(testText.endsWith('with'));
+
+function ucFirst(str) {
+  if (typeof str !== 'string') return 'Require input string';
+  if (!str) return str;
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+function checkSpam(str) {
+  if (typeof str !== 'string') return 'Require input string';
+  checkedString = str.toLowerCase();
+  return checkedString.includes('xxx') || checkedString.includes('viagra');
+}
+
+console.log(checkSpam('VIAGRA'));
