@@ -1448,16 +1448,607 @@
 // console.log(testText.startsWith('W'));
 // console.log(testText.endsWith('with'));
 
-function ucFirst(str) {
-  if (typeof str !== 'string') return 'Require input string';
-  if (!str) return str;
-  return str[0].toUpperCase() + str.slice(1);
-}
+// function ucFirst(str) {
+//   if (typeof str !== 'string') return 'Require input string';
+//   if (!str) return str;
+//   return str[0].toUpperCase() + str.slice(1);
+// }
 
-function checkSpam(str) {
-  if (typeof str !== 'string') return 'Require input string';
-  checkedString = str.toLowerCase();
-  return checkedString.includes('xxx') || checkedString.includes('viagra');
-}
+// function checkSpam(str) {
+//   if (typeof str !== 'string') return 'Require input string';
+//   checkedString = str.toLowerCase();
+//   return checkedString.includes('xxx') || checkedString.includes('viagra');
+// }
 
-console.log(checkSpam('VIAGRA'));
+// console.log(checkSpam('VIAGRA'));
+
+// const truncate = function(str, maxlength) {
+//   let result = str;
+
+//   if (str.length > maxlength) {
+//     // result = str.slice(0, maxlength) + '...';
+//     // result = str.substring(0, maxlength) + '...' ;
+//     result = str.substr(0, maxlength) + '...' ;    
+//   }
+//   return result
+// }
+
+// console.log(truncate("What I'd like to tell on this topic is:", 20));
+
+// const extractCurrencyValue = function(str, rate) {
+//   // const dollar = str.slice(1);
+//   // return dollar * rate;
+//   return str.slice(1) * rate;
+// };
+
+// console.log(extractCurrencyValue('$120', 30.5));
+
+// let str = '  Wissanu '
+// str = str.trim(); // remove white space
+
+// let str = `What I'd like to tell on this topic is:`;
+// let arr = str.split(' ');
+// console.log(arr);
+
+// let str = 'Hello';
+// let arr = str.split('');
+// console.log(arr);
+
+// let students = new Array();
+
+// const product = {
+  //   name: 'Coke',
+  //   saleHistory: [
+    //     {
+      //       date: '20-01-2021',
+      //       amount: 2,
+      //       unitPrice: 15
+      //     },
+      //     {
+        //       date: '23-01-2021',
+        //       amount: 10,
+        //       unitPrice: 14
+        //     }
+        //   ]
+        // }
+
+// const students = ['Note', 'Beer', [1, 2, 8, { firstName: 'Tle' }]];
+// console.log(students[2]);
+
+// students[2] = 'Snap';
+// console.log(students[2]);
+
+// students[3] = 'Ham';
+// console.log(students[3])
+
+// // students[100] = 'Sun';
+// students[students.length] = 'Sun';
+// console.log(students.length)
+
+// const auxArr = [function() {console.log('Hello Array')}];
+// auxArr[0]();
+// delete students[2];
+// console.log(students);
+
+// const students = ['Note', 'Beer', 'Snap', 'Ham', 'Sun'];
+
+// // #1 push
+// console.log(students.push('Leo', 'Palm'));
+// console.log(students);
+
+// // #2 pop
+// console.log(students.pop());
+// console.log(students);
+
+// // #3 unshift
+// console.log(students.unshift('Micky', 'Game'));
+// console.log(students);
+
+// // #4 shift
+// console.log(students.shift());
+// console.log(students);
+
+// const newStudents = students;
+// newStudents.push('Micky');
+// console.log(students);
+
+// const newStudents = [...students];
+// students.firstName = 'Wissanu';
+
+// students.length = 2;
+// console.log(students);
+
+// for (let i = 0; i < students.length; i++) {
+//   console.log(i + '. ' + students[i])
+// }
+
+// let i = 0;
+// for (let stu of students) {
+//   console.log(i + '. ' + stu)
+//   i++;
+// }
+
+// function logName(name) {
+//   console.log(name);
+// }
+
+// ["Game", "Note", "Beer", "Snap", "Ham", "Sun", "Leo"]
+// students.forEach(logName);
+
+// students.forEach(function(name, index, arr) {
+//   console.log(name, index, arr);
+//   // console.log(index)
+//   // console.log(arr)
+// });
+
+// students.forEach(name => console.log(name));
+
+// Iteration 1 call function(stu) {console.log(stu)} ; stu = 'Game'
+// Iteration 2 call function(stu) {console.log(stu)} ; stu = 'Note'
+// Iteration 3 call function(stu) {console.log(stu)} ; stu = 'Note'
+
+// const numbers = [2, 3, 5, 7, 11, 13];
+// find newNumbers = [4, 9, 25, 49, 121, 169];
+
+// find unique students name
+// students.includes('Palm'), students.indexOf('Palm')
+// const students = [
+//   'Palm',
+//   'Micky', 
+//   'Boss', 
+//   'Palm', 
+//   'Sine', 
+//   'Beer', 
+//   'Boss',
+//   'Snap',
+//   'Micky',
+//   'Palm',
+//   'Sine'
+// ]; // ['Palm', 'Micky', 'Boss', 'Sine', 'Beer', 'Snap'];
+
+// console.log(students.indexOf('PalmMicky'));
+
+// const result = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   result.push(numbers[i] ** 2);
+// }
+
+// for (let num of numbers) {
+//   result.push(num ** 2);
+// }
+
+// numbers.forEach(num => {
+//   result.push(num ** 2);
+// });
+
+// console.log(result)
+
+// for (let i = 0; i < students.length; i++) {  
+//   if (!result.includes(students[i])) result.push(students[i]);
+// }
+
+// for (let stu of students) {
+//   if (!result.includes(stu)) result.push(stu);
+// }
+
+// students.forEach(stu => {
+//   if (!result.includes(stu)) result.push(stu);
+//   // if (result.indexOf(stu) === -1) result.push(stu);
+// });
+
+// function foreeach(cb) {
+//   for (let i = 0; i < arr.length; i++) {
+//     cb(arr[i], i, arr)
+//   }
+// }
+
+// students.forEach((value, index, arr) => {
+
+// });
+
+// console.log(result)
+
+// let arr = new Array("Apple", "Pear", "etc"); // ['Apple', 'Pear', 'etc']
+// arr = ['Apple', 'Pear', 'etc']
+
+// let arr = new Array(2); // not [2]; array length = 2
+
+// let arr = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+
+// console.log(arr[1][1]);
+
+// const styles = ['Jazz', 'Blues'];
+// styles.push('Rock-n-Roll'); // ['Jazz', 'Blues', 'Rock-n-Roll']
+// styles[1] = 'Classics'; // ['Jazz', 'Classics', 'Rock-n-Roll']
+// styles.shift(); // ['Classics', 'Rock-n-Roll']
+// styles.unshift('Rap', 'Reggae'); // ['Rap', 'Reggae', 'Classics', 'Rock-n-Roll']
+// console.log(styles);
+
+// const sumInput = () => {
+//   const inputs = [];
+//   while (1) {
+//     const newValue = prompt('Enter value'); // '    ' => ''  
+//     // if (!newValue) break; // break if newValue is Nan or 0
+//     if (isNaN(newValue) || newValue === null || newValue.trim() === '') break;
+//     inputs.push(+newValue);
+//   }
+//   let sum = 0;
+//   inputs.forEach(value => {
+//     sum += value;
+//   });
+//   console.log(sum);
+// }
+
+// const newValue = prompt('Enter value');
+// console.log(NaN === NaN)
+// const int = 4; // 0, '', null, undefined, Nan
+// if (int) 
+
+// sumInput();
+
+// const numbers = [2, 3, 5, 7, 11, 13]; // [2, 3, 7, 11, 13]
+// delete numbers[2]
+
+// console.log(numbers.splice(2, 2, 9));
+// numbers.splice(3, 2)
+// numbers.splice(-1, 0, 9, 17, 37);
+// console.log(numbers.slice(2, 4))
+// console.log(numbers)
+
+// const arr = ["t", "e", "s", "t"];
+// console.log(arr.slice(1));
+// console.log(arr.slice(-2, -1));
+
+// const names = ['Sun', 'Boss', 'Note', 'Beer', 'Leo', 'Boss', 'Micky'];
+// const anotherNames = ['Note', 'Beer'];
+// const anotherNames1 = ['Leo', 'Palm', 'Micky'];
+
+// console.log(names.concat(anotherNames, anotherNames1));
+// console.log(names)
+
+// console.log([...names, ...anotherNames, ...anotherNames1])
+
+// const result = names.find((value, index, arr) => { 
+//   return value === 'Boss' 
+// });
+
+// const ind = names.findIndex((value, index, arr) => { 
+//   return value === 'Bss' 
+// });
+
+// console.log(ind)
+
+// function read(obj) {
+//   console.log(obj.name);
+// }
+
+// read({ name: 'Tle' });
+
+// const users = [
+//   { 
+//     id: 1, 
+//     name: "John",
+//     address: {
+//       province: 'Bangkok',
+//       district: 'Pathumwan'
+//     }
+//   },
+//   { 
+//     id: 2, 
+//     name: "Pete",
+//     address: {
+//       province: 'Loei',
+//       district: 'Chiang Kan'
+//     }
+//   },
+//   { 
+//     id: 3, 
+//     name: "Mary",
+//     address: {
+//       province: 'Trat',
+//       district: 'Koh Chang'
+//     }
+//   },
+//   { 
+//     id: 4, 
+//     name: "Jim",
+//     address: {
+//       province: 'Bangkok',
+//       district: 'Ladprao'
+//     }
+//   }
+// ];
+
+// const name = users.find(item => {
+//   return item.name.toLowerCase() === 'pete';
+// });
+
+// const name = users.find(item => {
+//   return item.address.district === 'Pathumwan';
+// });
+
+// Iteration #1 item = { id: 1, name: "John" }
+// Iteration #2 item = { id: 2, name: "Pete" }
+// Iteration #3 item = { id: 3, name: "Mary" }
+
+// console.log(name);
+
+// const indexToEdit = users.findIndex(item => item.name === 'Pete');
+
+// if (indexToEdit !== -1) users[indexToEdit].name = 'Tim';
+// console.log(users)
+
+// const numbers = [7, -3, -19, 2, -11, 13, 5];
+
+// const greaterThanSix = numbers.find(item => item > 6); // 7
+// const greaterThanSix = numbers.filter(item => item > 6); // [7, 11, 13]
+// console.log(greaterThanSix);
+
+// const usersInBangkok = users.filter(item => item.address.province === 'Bangkok');
+// console.log(usersInBangkok);
+
+// const numbersPowerTwo = numbers.map(item => item ** 2); // [4, 9, 25, 49, 121, 169];
+// console.log(numbersPowerTwo);
+
+// numbers.sort();
+// console.log(numbers);
+
+// numbers.sort((a, b) => {
+//   // if (a < b) return -1;
+//   // if (a === b) return 0;
+//   // if (a > b) return 1;
+//   return a - b;
+// });
+
+// numbers.sort((a, b) => a - b);
+// numbers.sort((a, b) => b - a);
+
+// console.log(numbers);
+
+// numbers.reverse();
+// console.log(numbers);
+
+// const str = 'Hello World';
+// const splitted = str.split(' ');
+// console.log(splitted);
+
+// qs => id=1&&name=John&&orderBy=name&&limit=25
+// const queryString = ['id=1', 'name=John', 'orderBy=name', 'limit=25'];
+// const qs = queryString.join('&&') // id=1&&name=John&&orderBy=name&&limit=25
+// console.log(qs);
+
+// const str = 'Hello codecamp';
+
+// console.log(typeof numbers);
+// console.log(Array.isArray(str))
+
+// let sum = 0;
+
+// for (let i = 0; i < numbers.length; i++) {
+  //   sum += numbers[i] ** 2;
+  // }
+// const numbers = [-1, 4, -3, 17, 7, -2];
+
+// function cb(previousValue, item, index, arr) {  
+//   return previousValue + item ** 2;
+// }
+
+// const sumRed = numbers.reduce(cb, 0);
+// console.log(sumRed)
+// #Ite 1 call cb(0, -1, 0, [-1, 4, -3, 17, 7, -2]); return 1 => next previousValue(#Ite 2)
+// #Ite 2 call cb(1, 4, 1, [-1, 4, -3, 17, 7, -2]); return 17 => next previousValue(#Ite 3)
+// .
+// .
+// .
+// #Ite last cb(364, -2, 5, [-1, 4, -3, 17, 7, -2]) return 368 => return result of reduce method
+
+// numbers.reduce(function(previousValue, item, index, arr) {
+
+// }, null);
+
+// ข้อ 1 หา array ที่มีชื่อ unique
+// ข้อ 2 ให้นับจำนวนครั้วที่ซ้ำของแต่ละชื่อ
+
+// const students = [
+//   'Palm',
+//   'Micky', 
+//   'Boss', 
+//   'Palm', 
+//   'Sine', 
+//   'Beer', 
+//   'Boss',
+//   'Snap',
+//   'Micky',
+//   'Palm',
+//   'Sine'
+// ]; // ['Palm', 'Micky', 'Boss', 'Sine', 'Beer', 'Snap'];
+// Palm : 3
+// Mickey : 2
+// Boss : 2
+// Sine : 2
+// Beer : 1
+
+// const username = prompt('Enter username');
+// const role = username === null || username === '' ? 'Guest' : 'User'
+
+// const numbers = [-1, 4, -3, 17, 7, -2];
+// const newNumber = numbers;
+
+// const newNumber = [...numbers, 29] // [-1, 4, -3, 17, 7, -2, 29]
+// const newNumber = [13, ...numbers, 29] // [13, -1, 4, -3, 17, 7, -2, 29]
+
+// console.log(uniqueStudents);
+
+// const numbers = [-1, 4, -3, 17, 7, -2];
+
+// const sum = numbers.reduce(function(accumulator, item) {
+//   const result = accumulator + item;
+//   return result;
+// }, 0);
+
+// round   previousAccumulator   currentValue   nextAccumulator
+// 1       0                     -1             -1
+// 2       -1                    4              3
+// 3       3                     -3             0
+// 4       0                     17             17
+// 5       17                    7              24
+// 6       24                    -2             22
+
+// ['Palm','Micky','Boss','Palm','Sine','Beer','Boss','Snap','Micky','Palm','Sine']
+
+// const uniqueStudents = students.reduce((acc, item) => {  
+//   if (!acc.includes(item)) {
+//     acc.push(item);
+//   }
+
+//   return acc;
+//   // console.log(acc)
+//   // return !acc.includes(item) ? [...acc, item] : acc;
+// }, []);
+
+// round   previousAccumulator       currentValue   nextAccumulator
+// 1       []                        'Palm'         ['Palm']
+// 2       ['Palm']                  'Micky'        ['Palm', 'Micky']
+// 3       ['Palm', 'Micky']         'Boss'         ['Palm', 'Micky', 'Boss']
+// 4       ['Palm', 'Micky', 'Boss'] 'Palm'         ['Palm', 'Micky', 'Boss']         
+// 5       ['Palm', 'Micky', 'Boss'] 'Sine'         ['Palm', 'Micky', 'Boss', 'Sine']
+// 6       ['Palm', 'Micky', 'Boss', 'Sine']
+
+// {
+//   'Palm': 3,
+//   'Micky': 2,
+//   'Boss': 2
+// }
+
+// const user = {
+//   nickName: 'Tle'
+// }
+
+// user.nickName // 'Tle'
+// user.lastName // undefined
+
+// const reduceCount = (acc, item) => {
+//   // if (!item in acc) { 
+//   //   acc[item] = acc[item] + 1;
+//   // } else {
+//   //   acc[item] = 1;
+//   // }  
+
+//   // if (acc[item]) { 
+//   //   acc[item] += 1;
+//   // } else {
+//   //   acc[item] = 1;
+//   // }
+
+//   // acc[item] = acc[item] ? acc[item] + 1 : 1;
+
+//   acc[item] = (acc[item] || 0) + 1;
+
+//   return acc;
+// }
+
+// const count = students.reduce(reduceCount, {});
+
+// // round acc                                 item       nextAcc
+// // 1     {}                                  'Palm'     {'Palm': 1}
+// // 2     {'Palm': 1}                         'Micky'    {'Palm': 1, 'Micky': 1}
+// // 3     {'Palm': 1, 'Micky': 1}             'Boss'     {'Palm': 1, 'Micky': 1, 'Boss': 1}
+// // 4     {'Palm': 1, 'Micky': 1, 'Boss': 1}  'Palm'     {'Palm': 2, 'Micky': 1, 'Boss': 1}
+
+// const num = null || '' || 7 || 8000; // 7
+// const an = 'Test' && null && ''; // null
+
+// const array1 = [1, 2, 30, 400]
+// const array2 = array.map(item => item * 2);
+
+// const array1 = [1, 2, 3, 4];
+// const array2 = array1.map(item => String(item))
+// const array2 = array1.map(item => '' + item)
+// const array2 = array1.map(item => `${item}`)
+
+// const array1 = [1, "1", 2, {}] 
+// const array2 = array1.map(item => typeof item)
+
+// const array1 = ["apple", "banana", "orange"]
+// const array2 = array1.map(item => item.toUpperCase())
+
+// const array1 = [
+//   { name: "apple", age: 14 },
+//   { name: "banana", age: 18 },
+//   { name: "watermelon", age: 32 },
+// ]
+// const array2 = array1.map(item => item.name)
+// const array2 = array1.map(item => item.age)
+
+// const array1 = [
+//   { name: "apple", surname: "London" },
+//   { name: "banana", surname: "Bangkok" },
+//   { name: "watermelon", surname: "Singapore" },
+// ]
+// const array2 = array1.map(item => item.name + ' ' + item.surname);
+// const array2 = array1.map(item => `${item.name} ${item.surname}`);
+
+// const array1 = [1,3,4,5,6,7,8]
+// const array2 = array1.map(item => item % 2 === 0 ? 'even' : 'odd');
+
+// const array1 = [1, -3, 2, 8, -4, 5]
+// const array2 = array1.map(item => item > 0 ? item : item * -1)
+// const array2 = array1.map(item => Math.abs(item))
+
+// const array1 = [100, 200.25, 300.84, 400.3];
+// const array2 = array1.map(item => item.toFixed(2))
+
+// const array3 = [...array1, 500]
+
+// const array1 = [
+//   { name: "apple", birth: "2000-01-01" },
+//   { name: "banana", birth: "1990-10-01" },
+//   { name: "watermelon", birth: "1985-12-01" },
+// ]
+// const array2 = array1.map(item => {
+//   const birth = new Date(item.birth)
+//   const now = new Date()
+//   // return now.getFullYear() - birth.getFullYear();
+//   // return {
+//   //   name: item.name,
+//   //   birth: item.birth,
+//   //   age: now.getFullYear() - birth.getFullYear()
+//   // }
+
+//   let age;
+//   if (now.getMonth < birth.getMonth) {
+//     age = now.getFullYear() - birth.getFullYear() - 1;
+//   } else if (now.getMonth > birth.getMonth) {
+//     age = now.getFullYear() - birth.getFullYear()
+//   } else {
+//     if (now.getDate < birth.getDate) {
+//       age = now.getFullYear() - birth.getFullYear() - 1;
+//     } else {
+//       age = now.getFullYear() - birth.getFullYear()
+//     }
+//   }
+
+
+//   return {
+//     ...item,
+//     age, // age: age    
+//   }
+// })
+
+// const array2 = array1.map(item => (
+//   {
+//     ...item, 
+//     age: new Date().getFullYear() - new Date(item.birth).getFullYear()
+//   }
+// )
+
+// const person = { firstName: 'W', lastName: 'K' };
+// const person1 = {...person, age: 20, firstName: 'A'};
+// const person2 = { age: 20, firstName: 'A', ...person};  
+// { firstName: 'W', lastName: 'K', age: 20 }
+
