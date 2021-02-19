@@ -1932,20 +1932,29 @@
 // user.nickName // 'Tle'
 // user.lastName // undefined
 
+// const obj = {
+//   count: 2,
+//   item
+// }
+
+// obj.count += 1;
+// obj.count++;
+// obj['count']++;
+
 // const reduceCount = (acc, item) => {
-//   // if (!item in acc) { 
-//   //   acc[item] = acc[item] + 1;
-//   // } else {
-//   //   acc[item] = 1;
-//   // }  
+//   if (!item in acc) { 
+//     acc[item] = acc[item] + 1;
+//   } else {
+//     acc[item] = 1;
+//   }  
 
-//   // if (acc[item]) { 
-//   //   acc[item] += 1;
-//   // } else {
-//   //   acc[item] = 1;
-//   // }
+//   if (acc[item]) { 
+//     acc[item] += 1;
+//   } else {
+//     acc[item] = 1;
+//   }
 
-//   // acc[item] = acc[item] ? acc[item] + 1 : 1;
+//   acc[item] = acc[item] ? acc[item] + 1 : 1;
 
 //   acc[item] = (acc[item] || 0) + 1;
 
@@ -2052,3 +2061,795 @@
 // const person2 = { age: 20, firstName: 'A', ...person};  
 // { firstName: 'W', lastName: 'K', age: 20 }
 
+// const mapMonth = [
+//   'jan', 
+//   'feb', 
+//   'mar', 
+//   'apr', 
+//   'may', 
+//   'jun', 
+//   'jul', 
+//   'aug', 
+//   'sep', 
+//   'oct', 
+//   'nov', 
+//   'dec'
+// ];
+
+// const mapMonthThai = [
+//   'มค', 
+//   'กพ', 
+//   'มีค', 
+//   'เมย', 
+//   'พค', 
+//   'มิย', 
+//   'กค', 
+//   'สค', 
+//   'กย', 
+//   'ตค', 
+//   'พย', 
+//   'ธค'
+// ];
+
+// const now = new Date();
+// console.log(now.getMonth());
+// console.log(`${now.getDate()} ${mapMonth[now.getMonth()]} ${now.getFullYear()}`);
+// console.log(now.toLocaleString('default', { day: '2-digit', month: 'short',  }).toLowerCase());
+
+// const array1 = [
+//   { name: "apple", birth: "2000-01-01" },
+//   { name: "banana", birth: "1990-10-10" },
+//   { name: "watermelon", birth: "1985-12-30" },
+// ];
+
+// const array2 = array1.map(item => {
+//   const birth = new Date(item.birth);
+//   return (
+// `<tr>
+// <td>${item.name}</td>
+// <td>${birth.getDate()} ${birth.toLocaleString('default', { month: 'short' }).toLowerCase()} ${birth.getFullYear()}</td>
+// </tr>`
+//   )
+// })
+
+// console.log(array2)
+
+// const arr = ['Tle', 'Jit'];
+
+// arr[0] = 'Ham';
+
+// delete arr[0]
+// console.log(arr)
+// console.log(arr[0]);
+// arr[100] = 'Sun';
+
+// push, pop, unshift, shift
+// arr.push('Sun', 'Sine'); // ['Tle', 'Jit', 'Sun', 'Sine'] return new length
+// arr.pop() // ['Tle'] return 'Jit'
+// arr.unshift('Leo', 'Note') // ['Leo', 'Note', Tle', 'Jit'] return new length
+// arr.shift(); // ['Jit'] return 'Tle'
+
+// Array.isArray(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//   // i is index
+//   // item is arr[i]
+// }
+
+// let i = 0;
+// for (let item of arr) {
+//   // i++;  
+// }
+
+// arr.forEach(function(item, index) {
+  
+// })
+
+// splice, slice
+// const numbers = [4, 6, 8, 7];
+// console.log(numbers.splice(2, 1))
+// console.log(numbers)
+// console.log(numbers.splice(3, 0, 7, 9))
+// console.log(numbers)
+// console.log(numbers.splice(1, 2, 7, 9, 5))
+// const cutArr = numbers.splice(-2, 1, 9, 11)
+// console.log(cutArr)
+// console.log(numbers)
+
+// const newNum = numbers.slice(1)
+// const newNum = numbers.slice(1, 3)
+// const newNum = numbers.slice()
+// const newNum = numbers.slice(-3)
+// console.log(newNum);
+// console.log(numbers);
+// console.log(newNum === numbers);
+
+// const number1 = [6, 9, 4];
+// const number2 = [5, 8, 6];
+// const number3 = [4, 10];
+
+// // concat
+// const combined = number1.concat(number2, number3);
+// console.log(combined);
+// // console.log(number1);
+
+// const clone = [...number1, ...number2, ...number3];
+// console.log(clone);
+
+// indexOf, lastIndexOf, includes
+// const cars = ['Toyota', 'Honda', 'Mitsubishi', 'Nissan', 'Volvo', 'BMW', 'Honda'];
+
+// const ind = cars.indexOf('Honda') // found return index, not found return -1
+// // lastIndexOf search from right to left found return index, not found return -1
+// const lastInd = cars.lastIndexOf('Hond');
+// const isIncludes = cars.includes('Mitsubishi', 3);
+// console.log(isIncludes)
+
+// find, findIndex, filter
+// const findCar = cars.find(item => {
+//   return item.toLowerCase() === 'honda';
+// }) // ถ้า return from callback function เป็น จริง return item ที่ทำให้ค่ามันเป็นจริง
+// // ถ้ามัน false ทุก item จะ return undefined
+
+// const findInd = cars.findIndex(item => {
+//   return item.toLowerCase() === 'hondaaaa';
+// })
+
+// const filteredCars = cars.filter(item => {
+//   return item.toLowerCase() === 'honda';
+// })
+
+// // console.log(filteredCars);
+
+// // map
+// const persons = [
+//   {
+//     name: 'Tle',
+//     weight: 20,
+//     height: 155
+//   },
+//   {
+//     name: 'Ham',
+//     weight: 65,
+//     height: 175
+//   }
+// ]
+
+// const heightInMeters = persons.map(item => {
+//   return item.height / 100;
+// }) // [1.55, 1.75]
+
+// const bmis = persons.map(item => item.weight / ((item.height / 100) ** 2));
+// console.log(bmis);
+
+// sort
+// const numbers = [29, 14, 7, 65, 38, 2, 99, 100]; // [14, 29, 7, 65, 38, 2, 99, 100]
+//                                                  // [14, 7, 29]
+// numbers.sort();
+// console.log(numbers)
+
+// numbers.sort((a, b) => a - b );
+// numbers.sort((a, b) => b - a );
+
+// const numbers = [-5, 3, 8, -7, 0, -1]; // [0, -1, 3, -5, -7, 8]
+// // -5, 3 => [3, -5, 8, -7, 0, -1]
+// // -5, 8 => [3, -5, 8, -7, 0, -1]
+// // 8, -7 => [3, -5, -7, 8, 0, -1]
+// // -5, -7 => [3, -5, -7, 8, 0, -1]
+// // 8, 0 => [3, -5, -7, 0, 8, -1]
+// // -7, 0 => [3, -5, 0, -7, 8, -1]
+// numbers.sort((a, b) => a ** 2 - b ** 2)
+
+// เรียงนักเรียนจากเงินมากไปหาน้อย
+// const students = [
+//   {
+//     name: 'Tle',
+//     money: 120
+//   },
+//   {
+//     name: 'Jit',
+//     money: 50
+//   },
+//   {
+//     name: 'Beer',
+//     money: 125
+//   },
+//   {
+//     name: 'Snap',
+//     money: 90
+//   }
+// ]
+
+// students.sort((a, b) => b.money - a.money);
+// console.log(students)
+
+// reverse
+// const numbers = [29, 14, 7, 65, 38, 2, 99, 100];
+// numbers.reverse()
+// console.log(numbers)
+
+// split, join
+// const str = '1,000,134';
+// // console.log(+str)
+// const splitted = str.split(',');
+// const joined = splitted.join('');
+// console.log(splitted)
+// console.log(+joined)
+
+// const numbers = [1, 5, 9, 13, 17, 2, 7];
+
+// const accTotalSale = 15400;
+// const sales = [120, 700, 900, 450, 1800];
+
+// let sum = 0;
+// numbers.forEach(item => {
+//   sum += item;
+// })
+
+// const sum = numbers.reduce(callbackFn, initialValue)
+
+// const sum = sales.reduce((accumulator, item) => {
+//   return accumulator + item;
+// }, accTotalSale)
+
+// const ids = [1, 2, 3, 1, 4, 3]; // ['Cin', 'Sine', 'Beer', 'Cin', 'Note', 'Beer']
+// const person = [
+//   {
+//     id: 1,
+//     name: 'Cin'
+//   },
+//   {
+//     id: 2,
+//     name: 'Sine',
+//   },
+//   {
+//     id: 3,
+//     name: 'Beer'
+//   },
+//   {
+//     id: 4,
+//     name: 'Note'
+//   }
+// ]
+
+// const mapped = {
+//   1: 'Cin',
+//   2: 'Sine',
+//   3: 'Beer',
+//   4: 'Note'
+// }
+
+// const mapped = person.reduce((acc, item) => {
+//   if (!acc[item.id]) acc[item.id] = item.name
+//   return acc;
+// }, {})
+
+// const result = ids.map(item => mapped[item])
+// console.log(result)
+
+// const str = 'Codecamp';
+
+// for (let a of str) {
+//   console.log(a);
+// }
+
+// const customer = {
+//   name: 'Tle',
+//   address: {
+
+//   },
+//   0: 'xxx',
+//   true: 'Boolean'
+// }
+
+// customer.lastName = 'kk';
+// customer['firstName'] = 'aaa'
+
+// let map = new Map();
+
+// map.set('1', 'str1');   // a string key
+// map.set(1, 'num1');     // a numeric key
+// map.set(true, 'bool1'); // a boolean key
+
+// console.log(map.get('1'))
+// console.log(map.get(1))
+// console.log(map.size)
+
+// map.set('1', 'string1')
+// console.log(map.get('1'))
+
+// map['2'] = 'string2';
+// console.log(map.get('2'))
+
+// const john = { name: 'John' }
+// const johny = {name: 'John'}
+// console.log(john === johny)
+
+// map.set(john, ['I', 'am', 'John'])
+
+// console.log(map.get(john));
+// console.log(map.get({ name: 'John' }))
+
+// for (let key of map.keys()) {
+  // console.log(key)
+  // console.log(typeof key)
+// }
+
+// for (let value of map.values()) {
+  // console.log(value)
+  // console.log(typeof value)
+// }
+
+// for (let ent of map.entries()) {
+  // console.log(ent[0])
+  // console.log(ent[1])
+// }
+
+// map.forEach((value, key, mapSelf) => {
+//   console.log(`key is ${key}, value is ${value}`)
+//   console.log(mapSelf)
+// }) 
+
+// const newMap = [
+//   ['1', 'string1'],
+//   [1, 'number1'],
+//   [true, 'boolean']
+// ]
+
+// const map = new Map(newMap);
+// console.log(map.get(1))
+
+// let prices = Object.fromEntries([
+//   ['banana', 1],
+//   ['orange', 2],
+//   ['meat', 4]
+// ]);
+
+// console.log(prices)
+
+// const set = new Set();
+// set.add('Tle')
+// set.add('Note')
+// // console.log(set.size)
+
+// // set.delete('Tle')
+// set.clear();
+// console.log(set.size)
+// console.log(set)
+
+// let john = { name: "John" };
+// let pete = { name: "Pete" };
+// let mary = { name: "Mary" };
+
+// set.add(john);
+// set.add(pete);
+// set.add(mary);
+// // set.add({name: "John"});
+// set.add(mary);
+// console.log(set.size)
+// console.log(set)
+
+// console.log(set.has('Tles'))
+
+// for (let data of set) {
+//   // console.log(data)
+// }
+
+// set.forEach((value, sameValue, selfSet) => {
+//   console.log(value)
+//   console.log(sameValue)
+// }); 
+
+// const str = 'Hello';
+
+// const ar = Array.from(str)
+// console.log(ar)
+
+// let values = [
+//   "Hare", 
+//   "Krishna", 
+//   "Hare", 
+//   "Krishna", 
+//   "Krishna", 
+//   "Krishna", 
+//   "Hare", 
+//   "Hare", 
+//   ":-O" 
+// ];
+
+// const resultSet = new Set();
+// for (let value of values) {
+//   resultSet.add(value);
+// }
+
+// const resultArr = [];
+
+// for (let data of resultSet) {
+//   resultArr.push(data);
+// }
+
+// console.log(resultArr)
+
+// const fromArrSet = new Set(values);
+// const result = Array.from(fromArrSet);
+
+// function unique(arr) {
+//   return Array.from(new Set(arr));
+// }
+
+// const unique = arr => Array.from(new Set(arr));
+// console.log(unique(values))
+
+// let map = new Map();
+
+// map.set("name", "John");
+
+// let keys = map.keys();
+// let vals = map.values();
+// let ent = map.entries();
+
+// // Error: keys.push is not a function
+// // keys.push("more");
+
+// const conArr = Array.from(keys);
+// const conValsArr = Array.from(vals);
+// const conEnt = Array.from(ent);
+// console.log(conEnt) // [['name', 'John']]
+// const result = [...conArr, ...conValsArr];
+// result.push('more')
+// console.log(result)
+
+// const arr1 = [
+//   [1, 2],
+//   [3, 4],
+//   [5, 6]
+// ] // [1, 2, 3, 4, 5, 6]
+
+// const a1 = [1,2,3]
+// const a2 = [4,5]
+// const concatArr = [...a1, ...a2];
+
+// const res = arr1.reduce((acc, item) => [...acc, ...item], []);
+// // Ite1 acc = [] item = [1, 2] => [1, 2]
+// // Ite2 acc = [1, 2] item = [3, 4] => [...acc, ...item] => [1, 2, 3, 4]
+
+// console.log(res)
+
+// const person = {
+//   firstName: 'Wissanu',
+//   lastName: 'KongjanD',
+//   age: 27
+// };
+
+// const keys = Object.keys(person) // ['firstName', 'lastName', 'age']
+// // console.log(keys)
+// const vals = Object.values(person)
+// // console.log(vals)
+// const ents = Object.entries(person)
+// console.log(ents)
+
+// for (let k of keys) {
+//   console.log(`${k} : ${person[k]}`)
+// }
+
+// for (let val of ents) {
+//   console.log(`${val[0]} : ${val[1]}`)
+// }
+
+// val = [ , ] // [key, value]
+// for (let [key, value] of ents) {
+//   console.log(`${key} : ${value}`)
+// }
+
+// let salaries = {
+//   "John": 400,
+//   "Pete": 300,
+//   "Mary": 250
+// };
+
+// const values = Object.values(salaries);
+
+// let sum = 0
+
+// for (let i = 0; i < values.length; i++) {
+//   sum = sum + values[i];
+// }
+
+// sum = values.reduce((acc, item) => {
+//   // console.log(acc)
+//   return acc + item
+// });
+
+// let user = {
+//   // name: 'John',
+//   // age: 30
+// };
+
+// console.log(Object.keys(user).length);
+
+// console.log(sum)
+
+// const now = new Date();
+// // console.log(now)
+// // `YYYY-MM-DDTHH:mm:ss.sssZ`
+// const dateString = new Date('13-12-2021');
+// // const dateString2 = new Date('17, December 1995 03:24:00');
+// // console.log(dateString)
+
+// const dateParam = new Date(2021, 1, 18, 1, 30, 35);
+// console.log(dateParam);
+
+// const dateNum = new Date(1613581200000);
+// console.log(dateNum);
+
+// // getFullYear
+// console.log(dateNum.getFullYear())
+// // getMonth
+// console.log(dateNum.getMonth())
+// // getDate
+// console.log(dateNum.getDate())
+// console.log(dateNum.getUTCDate())
+// // getHours
+// console.log(dateNum.getHours());
+// console.log(dateNum.getUTCHours());
+// // getMinutes
+// console.log(dateNum.getMinutes());
+// // getSecond
+// console.log(dateNum.getSeconds())
+
+// // getDay
+// console.log(dateNum.getDay())
+
+// // getTime
+// console.log(dateNum.getTime());
+
+// dateNum.setFullYear(2019);
+// // dateNum.setMonth(dateNum.getMonth() + 2);
+// dateNum.setDate(dateNum.getDate() + 12);
+// dateNum.setHours(25);
+// console.log(dateNum)
+
+// const monthThai = [
+//   'มกราคม',
+//   'กุมภาพันธ์',
+//   'มีนาคม',
+//   'เมษายน',
+//   'พฤษภาคม',
+//   'มิถุนายน',
+//   'กรกฎาคม',
+//   'สิงหาคม',
+//   'กันยายน',
+//   'ตุลาคม',
+//   'พฤศจิกายน',
+//   'ธันวาคม'
+// ]
+
+// const dayThai = [
+//   'อาทิตย์',
+//   'จันทร์',
+//   'อังคาร',
+//   'พุธ',
+//   'พฤหัสบดี',
+//   'ศุกร์',
+//   'เสาร์',
+// ]
+
+// จันทร์ 18 มกราคม 2564
+// console.log(`${dayThai[dateNum.getDay()]} ${dateNum.getDate()} ${monthThai[dateNum.getMonth()]} ${dateNum.getFullYear() + 543}`)
+
+const date1 = new Date(2021, 2, 1, 12); // 1 Mar 21 12.00
+const date2 = new Date(2021, 2, 1, 9, 24, 17); // 13 Feb 21 9.24.17
+
+// console.log(date1 > date2)
+// console.log(date1 === date2) // don't do this
+// console.log(date1.getTime() === date2.getTime()); // Correct
+// console.log(date1.getTime() > date2.getTime());
+
+// const now = new Date()
+// console.log(now)
+// const deadline = new Date(10 * 60 * 1000 + now.getTime());
+// const deadline = new Date(now);
+// deadline.setHours(deadline.getHours() + 36);
+// console.log(deadline)
+
+// const timeDiff = date1.getTime() - date2.getTime();
+// const day = Math.floor(timeDiff / 1000 / 60 / 60 / 24)
+// let timeLeft = timeDiff - day * 24 * 60 * 60 * 1000;
+// const hour = Math.floor(timeLeft / 1000 / 60 / 60)
+// timeLeft = timeLeft - hour * 1000 * 60 * 60;
+// const min = Math.floor(timeLeft / 1000 / 60)
+// console.log(day)
+// console.log(hour)
+// console.log(min)
+
+
+// const isSameDay = (d1, d2) => {
+//   // return true if d1 is same day with d2
+//   // return false if not same day
+//   // d1.setHours(0, 0 , 0, 0);
+//   // d2.setHours(0, 0, 0, 0);
+//   // return d1.getTime() === d2.getTime();
+//   // return d1.getFullYear() === d2.getFullYear() && d1.getMonth() === d2.getMonth()
+//   // && d1.getDate() === d2.getDate();
+//   // console.log(d1)
+//   // console.log(d2)
+  
+//   const hours1 = new Date().getHours()
+//   const hours1UTC = new Date().getUTCHours()
+//   const hourDiff = hours1 - hours1UTC;
+//   const day1 = Math.floor((d1.getTime() + hourDiff * 60 * 60 * 1000) / 1000 / 60 /60 / 24);
+//   const day2 = Math.floor((d2.getTime() + hourDiff * 60 * 60 * 1000) / 1000 / 60 /60 / 24);
+//   return day1 === day2;
+// }
+
+// console.log(isSameDay(date1, date2));
+
+// const start = Date.now();
+// let sum = 0;
+// for (let i = 0; i < 100000000; i++) {
+//   sum = sum + i + 1;
+// }
+// const end = Date.now();
+// const timeConsume = end - start;
+// console.log(timeConsume)
+// const a = 1;
+// const b = 2;
+
+// function getAllSale(a = null, b) {
+//   console.log(a)
+//   console.log(b)
+//   return 'Function Declaration';
+// }
+
+// const getAllSale = function(a = null, b = 0) {
+//   return 'Function Expression';
+// }
+
+// const getAllSale = a => ({name: 'Arrow Function'}); // { return {name: 'Arrow Function'} }
+
+// getAllSale(a)
+
+// function test(a ,b ,c ,d) {}
+
+// Math.max(1, 2, 4 ,5 ,6 ,7)
+
+// const sum = (...input) => input.reduce((sum, el) => sum + el, 0);
+
+// const nums = [1, 3, 5, 7, 12, 13]
+// console.log(nums.toString()) // '1, 3, 5, 7, 12, 13'
+// console.log(sum(...nums)) // [[1, 3, 5, 7, 12, 13]]
+// sum(nums[0], nums[1]);
+// // console.log(sum(1, 3, 5, 7, 12, 13))
+
+// const a = [1, 4, 5];
+// const b = [2, 7, 8, 0];
+
+// const c = [a, b]; // [[1, 4, 5], [2, 7, 8, 0]]
+// const c = [1, ...a, 7, ...b]; // [1, 1, 4, 5, 7, 2, 7, 8, 0]
+
+// sum(...a) + sum(...b)
+// sum(4, 5, ...a, ...b, 1, 7); // sum(1, 4, 5, 2, 7, 8, 0)
+
+// // const cloneA = a; 
+// const cloneA = [...a];
+// const obj = {
+//   firstName: 'W',
+//   lastName: 'K'
+// }
+
+// const cloneObj = Object.assign({}, obj)
+// const cloneObj = {...obj}
+
+// // role // account, sale, hr, store, ceo, chairman
+// function checkRole(...role) {
+//   // role.includes['account'] => getAllAcount
+// }
+
+// function getAllAccount() {
+//   if (!checkRole('account')) return;
+//   return [
+//     {
+//     name: 'Banshee1',
+//     num: '198045678',
+//     balance: 90
+//     },
+//     {
+//       name: 'Banshee2',
+//       num: '198012378',
+//       balance: 190
+//     }
+//   ]
+// }
+
+// const fullName = ['W', 'K', 'T', '197/23 Bantadthong Rd.']
+// const firstName = fullName[0]
+// const lastName = fullName[1]
+// const nickName = fullName[2]
+// const address = fullName[3]
+
+// console.log(`${fullName[0]} ${fullName[1]} ${fullName[2]} ${fullName[3]}`)
+// console.log(`${firstName} ${lastName} ${nickName} ${address}`)
+
+// const [firstName, lastName, nickName, address] = fullName;
+// const [,,, address] = fullName;
+// const [firstName, , nickName] = fullName;
+      // ['W', 'K', 'T', '197/23 Bantadthong Rd.']
+// console.log(nickName)
+
+// const [firstName, lastName] = ['Wissanu', 'KongjunD'];
+// useState(''); // [state , setState]
+// const [state, setState] = useState(''); // [state , setState]
+
+// const person = {
+//   firstName: 'Wis',
+//   lastName: 'Kong',
+//   age: 27
+// }
+
+// // Object.entries(person) // [['firstName', 'Wis'], ['lastName', 'Kong'], ['age', 27]]
+// for (let entry of Object.entries(person)) {
+//   console.log(`${entry[0]} : ${entry[1]}`)
+// }
+
+// for (let [key, value] of Object.entries(person)) {
+//   console.log(`${key} : ${value}`)
+// }
+
+// let guest = "Jane";
+// let admin = "Pete";
+
+// let dummy = guest;
+// guest = admin;
+// admin = dummy
+
+// [guest, admin] = [admin, guest];
+// console.log(guest);
+// console.log(admin);
+
+// const fullName = ['W', 'K', 'T', '197/23 Bantadthong Rd.']
+// const [firstName, lastName, ...otherInfo ] = fullName; // rest ['T', '197/23 Bantadthong Rd.']
+
+// const fullName = ['W']
+// const [firstName, lastName = '', ...otherInfo ] = fullName;
+// console.log(lastName)
+// console.log(otherInfo)
+
+// let [name = prompt('name?'), surname = prompt('surname?')] = ["Julius", ''];
+
+const auth = {
+  token: 'xxxxxxxxxxxxx',
+  user: {
+    username: 'Michael',
+    email: 'michael@codecamp.com',
+    address: {
+      postCode: '10400',
+      province: 'KTM'
+    }
+  },
+  cart: [
+    {
+      product: 'iPhone4',
+      amount: 1,
+      price: 1999
+    },
+    {
+      product: 'Chargers',
+      amount: 1,
+      price: 49
+    }
+  ],
+  totalPrice: 2048
+}
+
+// const token = auth.token
+// const user = auth.user
+// const cart = auth.cart
+// const totalPrice = auth.totalPrice
+
+const { firstName, lastName } = { fName: 'Wissanu', lName: 'KonjunD' }
+
+const { user } = auth;
+// console.log(token)
+console.log(user)
+// console.log(cart)
+// console.log(totalPrice)
